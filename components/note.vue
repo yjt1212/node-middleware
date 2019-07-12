@@ -59,7 +59,7 @@ export default{
 					console.log(_d.data);
 				});
 		},
-		// 获取MongoDB真实数据,接口
+		// 获取MongoDB数据,接口
 		getData2() {
 			axios.get('http://localhost:9090/search_data')
 				.then(_d => {
@@ -67,7 +67,7 @@ export default{
 					this.v_data = _d.data;
 				});
 		},
-		// 插入数据 (增加)
+		// 插入数据
 		insertFn() {
 			let _msgObj = {
 				txt : this.v_name,
@@ -84,7 +84,7 @@ export default{
 					this.v_msg = '';
 				});
 		},
-		// 搜索按钮 (查找)
+		// 搜索按钮
 		searchBtn() {
 			// console.log(this.v_searchVal);
 			axios.get('http://localhost:9090/find_data', {
