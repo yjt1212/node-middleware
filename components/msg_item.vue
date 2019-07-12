@@ -80,10 +80,6 @@ export default{
 					this.isShow = false;
 					this.isUpdataBtn = false;
 
-					// 用来在父组件中，触发子组件上的自定义属性，所对应的方法
-					// this.$emit 括号里写父组件中的子组件上的自定义属性名
-					// getDataFn就是子组件自定义的属性
-					// 目的是实现页面实时更新
 					this.$emit('getDataFn');
 				});
 		},
@@ -95,7 +91,7 @@ export default{
 			// 取消以及确认修改按钮隐藏
 			this.isUpdataBtn = false;
 		},
-		// 删除数据 (删除)
+		// 删除数据 
 		delData(delId) {
 			axios.get('http://localhost:9090/del_data', {
 				params: {"_id": delId}
